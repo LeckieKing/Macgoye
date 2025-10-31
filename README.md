@@ -1,43 +1,17 @@
+# byLLM Task Manager v1
 
-# calculator.jac
+>This version demonstrates a simple, single-file agentic implementation. All logic for tasks, email, and chat is contained in `main.jac` for clarity and ease of understanding.
 
-walker init {
-    # Starting point of the calculator program
-    std.out("Welcome to Jaseci Calculator!")
-    std.out("Choose operation: add / sub / mul / div")
+## Main Files
+- `main.jac` - All agent logic (tasks, email, chat) in one file
+- `utils.jac` - Utility functions
+- `.env` - Environment variables (email credentials, etc.)
+- `mydatabase/` - Local storage for tasks and sessions
 
-    operation = std.input("Enter operation: ")
+See the main code in `main.jac` for details.
 
-    num1 = int(std.input("Enter first number: "))
-    num2 = int(std.input("Enter second number: "))
+**Note:** v2 improves modularity, scalability, and maintainability by splitting code into multiple files and abstracting core logic.
 
-    result = 0
+---
 
-    if operation == "add" {
-        result = num1 + num2
-    }
-    elif operation == "sub" {
-        result = num1 - num2
-    }
-    elif operation == "mul" {
-        result = num1 * num2
-    }
-    elif operation == "div" {
-        if num2 != 0 {
-            result = num1 / num2
-        }
-        else {
-            std.out("Error: Division by zero!")
-            result = None
-        }
-    }
-    else {
-        std.out("Invalid operation!")
-    }
-
-    if result != None {
-        std.out("Result = " + str(result))
-    }
-}
-
-
+-> Visit v2 [here](../v2/README.md).
